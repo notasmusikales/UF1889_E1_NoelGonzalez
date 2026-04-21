@@ -6,7 +6,8 @@
         <field name="view_mode">list,form</field>
     </record>
 
-    <menuitem id="menu_seguimiento" name="Seguimiento Clientes" action="action_seguimiento"/>
+    <menuitem id="menu_seguimiento_root" name="Seguimiento" sequence="100"/>
+    <menuitem id="menu_seguimiento" name="Seguimiento Clientes" parent="menu_seguimiento_root" action="action_seguimiento"/>
 
     <record id="view_seguimiento_search" model="ir.ui.view">
         <field name="model">seguimiento.cliente</field>
