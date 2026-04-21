@@ -8,6 +8,17 @@
 
     <menuitem id="menu_seguimiento" name="Seguimiento Clientes" action="action_seguimiento"/>
 
+    <record id="view_seguimiento_search" model="ir.ui.view">
+        <field name="model">seguimiento.cliente</field>
+        <field name="arch" type="xml">
+            <search string="Buscar">
+                <field name="name"/>
+                <field name="partner_id"/>
+                <filter string="Pendientes" name="pending" domain="[('state', '=', 'pending')]"/>
+            </search>
+        </field>
+    </record>
+
     <record id="view_seguimiento_list" model="ir.ui.view">
         <field name="model">seguimiento.cliente</field>
         <field name="arch" type="xml">
